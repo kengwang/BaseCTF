@@ -1,0 +1,101 @@
+import { Badge } from '@theme';
+import { Person } from '../../theme/Person/Person.tsx';
+
+export const Supporters = () => {
+    const data = [
+        {
+            "category": "赞助商",
+            people: [
+                {
+                    name: 'DK 盾',
+                    avatar: 'https://s2.loli.net/2024/11/06/KFNJw6To7vmj3qf.png',
+                    link: 'https://www.dkdun.cn/',
+                    desc: '打造高性价比云服务器，让广大CTFer、学生群体早日上云',
+                    job: '服务器赞助'
+                }
+            ]
+        },
+        {
+            category: "策划",
+            people: [
+                {
+                    name: 'Kengwang',
+                    avatar: 'https://gcore.jsdelivr.net/gh/kengwang/CDN@main/avatar.png',
+                    link: 'https://blog.kengwang.com.cn/',
+                    desc: 'Stay Cool~',
+                    job: '策划/运维'
+                },
+                {
+                    name: 'LilRan',
+                    avatar: 'https://blog.xinshi.fun/assets/avatar.png',
+                    link: 'https://blog.xinshi.fun/',
+                    desc: '今日启程 无畏向前',
+                    job: '策划/运维'
+                }
+            ]
+        },
+        {
+            category: "出题",
+            people: [
+                {
+                    name: 'LilRan',
+                    avatar: 'https://blog.xinshi.fun/assets/avatar.png',
+                    link: 'https://blog.xinshi.fun/',
+                    desc: '今日启程 无畏向前',
+                    job: 'Misc 方向'
+                }
+            ]
+        },
+        {
+            category: "宣传",
+            people: [
+                {
+                    name: '北极仙翁',
+                    avatar: 'https://q.qlogo.cn/headimg_dl?dst_uin=1973450284&spec=640&img_type=jpg',
+                    link: 'https://www.ehpolestar.com/',
+                    desc: '北极仙翁的夜间茶馆',
+                    job: '宣传海报'
+                },
+                {
+                    name: 'LilRan',
+                    avatar: 'https://blog.xinshi.fun/assets/avatar.png',
+                    link: 'https://blog.xinshi.fun/',
+                    desc: '今日启程 无畏向前',
+                    job: '宣传'
+                }
+            ]
+        }
+    ]
+
+    return (
+        <div>
+            {data.map((item, index) => (
+                <div key={index}>
+                    <h2>{item.category}</h2>
+                    <div>
+                        {item.people.map((person, index) => (
+                            <Person
+                                name={person.name}
+                                avatar={person.avatar}
+                                link={person.link}
+                                description={person.desc}
+                                job={person.job}
+                            />
+                        ))}
+                    </div>
+                </div>
+            ))}
+        </div>
+    )
+}
+
+
+
+# 筹备工作
+
+> 感谢所有参与 BaseCTF 2024 高校联合新生赛 筹备工作的师傅们  
+> 他们为比赛的顺利举办付出了巨大的努力  
+> 无论是在前期宣传还是比赛出题, BaseCTF 都离不开他们的鼎力支持  
+> 向所有参与筹备的师傅们致以最诚挚的感谢！❤️
+
+<Supporters />
