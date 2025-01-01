@@ -1,16 +1,232 @@
-import { Badge } from '@theme';
 import { Person } from '../../theme/Person/Person.tsx';
 
 export const Supporters = () => {
+
+    const peoples = {
+        'lilran': {
+            name: 'LilRan',
+            avatar: 'https://blog.xinshi.fun/assets/avatar.png',
+            link: 'https://blog.xinshi.fun/',
+            desc: '今日启程 无畏向前'
+        },
+        'dk': {
+            name: 'DK 盾',
+            avatar: 'https://s2.loli.net/2024/11/06/KFNJw6To7vmj3qf.png',
+            link: 'https://www.dkdun.cn/',
+            desc: '打造高性价比云服务器，让广大CTFer、学生群体早日上云',
+        },
+        'kengwang': {
+            name: 'Kengwang',
+            avatar: 'https://gcore.jsdelivr.net/gh/kengwang/CDN@main/avatar.png',
+            link: 'https://blog.kengwang.com.cn/',
+            desc: 'Stay Cool~',
+        },
+        '北极仙翁': {
+            name: '北极仙翁',
+            avatar: 'https://q.qlogo.cn/headimg_dl?dst_uin=1973450284&spec=640&img_type=jpg',
+            link: 'https://www.ehpolestar.com/',
+            desc: '北极仙翁的夜间茶馆',
+        },
+        'luoingly': {
+            'name': 'Luoingly',
+            'avatar': 'https://luoingly.top/image/avatar.jpg',
+            'link': 'https://luoingly.top/',
+            'desc': '交错于虚拟与现实之间',
+        },
+        'yuro': {
+            'name': 'yuro',
+            'avatar': 'https://blog.yuro.work/images/avatar.png',
+            'link': 'https://yuro.top/',
+            'desc': '早睡早起早睡早起早睡早起早睡早起早睡早起早睡早起',
+        },
+        'delete': {
+            'name': 'DELETE',
+            'avatar': 'https://delete.love/images/1.jpg',
+            'link': 'https://delete.love/',
+            'desc': 'DELETE',
+        },
+        'sudopacman': {
+            'name': 'sudopacman',
+            'avatar': 'https://q1.qlogo.cn/g?b=qq&nk=2053401695&s=640',
+            'link': 'https://cryingn.github.io/',
+            'desc': 'sudopacman',
+        },
+        'gets': {
+            'name': 'gets',
+            'avatar': 'https://gets-pwn.oss-cn-hangzhou.aliyuncs.com/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240612154128.jpg',
+            'link': 'http://www.getspwn.xyz/',
+            'desc': 'gets',
+        },
+        'crazyman_army': {
+            'name': 'crazyman_army',
+            'avatar': 'https://s2.loli.net/2023/01/29/Duzv3pAYSsxaiVk.png',
+            'link': 'https://crazyman-army.github.io/',
+            'desc': '空白神 @r3kapig',
+        },
+        'n1ght': {
+            'name': 'N1ght',
+            'avatar': 'https://yezere.github.io/images/tx.jpg',
+            'link': 'https://n1ght.cn/',
+            'desc': 'No web No fun, Web@Polaris',
+        },
+        'chu0': {
+            'name': '薄雾初零',
+            'avatar': 'https://bowuchuling.github.io/background/touxiang.jpeg',
+            'link': 'https://bowuchuling.github.io/',
+            'desc': 'Future is now 🍭🍭🍭',
+        },
+        'chenxi': {
+            'name': '晨曦',
+            'avatar': 'https://chenxi9981.github.io/img/chenxi.jpg',
+            'link': 'https://chenxi9981.github.io/',
+            'desc': '',
+        },
+        'clearwine': {
+            'name': '清酒',
+            'avatar': 'http://clearwine.online/about/img/qingjiu.jpg',
+            'link': 'http://clearwine.online/',
+            'desc': '',
+        },
+        'goku': {
+            'name': 'Goku',
+            'avatar': 'https://q1.qlogo.cn/g?b=qq&nk=1403208824&s=640',
+            'link': '#',
+            'desc': '',
+        },
+        'j1nghong': {
+            'name': 'J1nghong',
+            'avatar': 'https://q1.qlogo.cn/g?b=qq&nk=1744116876&s=640',
+            'link': 'https://blog.csdn.net/J1ng_Hong',
+            'desc': '',
+        },
+        'lazy_forever': {
+            'name': 'lazy_forever',
+            'avatar': 'https://blog.lazyforever.top/img/favicon.png',
+            'link': 'https://blog.lazyforever.top/',
+            'desc': '不要和我比懒，我懒得和你比。',
+        },
+        'konpure': {
+            'name': 'KonPure',
+            'avatar': '',
+            'link': 'https://q1.qlogo.cn/g?b=qq&nk=104032111&s=640',
+            'desc': '',
+        },
+        'nshide': {
+            'name': 'NshIdE',
+            'avatar': 'https://q1.qlogo.cn/g?b=qq&nk=1621925986&s=640',
+            'link': '#',
+            'desc': '',
+        },
+        'a1gorithms': {
+            'name': 'A1gorithms',
+            'avatar': 'https://q1.qlogo.cn/g?b=qq&nk=1471554149&s=640',
+            'link': '#',
+            'desc': '',
+        },
+        'linkhash': {
+            'name': 'LinkHash',
+            'avatar': 'https://q1.qlogo.cn/g?b=qq&nk=2624587129&s=640',
+            'link': '#',
+            'desc': '',
+        },
+        'chovy': {
+            'name': 'Chovy',
+            'avatar': 'https://q1.qlogo.cn/g?b=qq&nk=2813901653&s=640',
+            'link': '#',
+            'desc': '',
+        },
+        'C2': {
+            'name': 'CDM258',
+            'avatar': 'http://www.cdm258.tech/wp-content/uploads/2024/02/cropped-QQ%E5%9B%BE%E7%89%8720240221003250.jpg',
+            'link': 'http://www.cdm258.tech/',
+            'desc': '',
+        },
+        'pr1s0n3r': {
+            'name': 'Pr1s0n3r',
+            'avatar': 'https://q1.qlogo.cn/g?b=qq&nk=3132920137&s=640',
+            'link': '#',
+            'desc': '',
+        },
+        'naby': {
+            'name': 'Naby',
+            'avatar': 'https://q1.qlogo.cn/g?b=qq&nk=1879084939&s=640',
+            'link': 'https://naby1.github.io/',
+            'desc': 'Yes or Right 希望大家在生活中只会得到正确答案',
+        },
+        'yunru': {
+            'name': 'Yunru',
+            'avatar': 'https://q1.qlogo.cn/g?b=qq&nk=1512325315&s=640',
+            'link': '#',
+            'desc': '',
+        },
+        'nydn': {
+            'name': 'Nydn',
+            'avatar': 'https://nyyyddddn.github.io/avatar/11.jpg',
+            'link': 'https://nyyyddddn.github.io/',
+            'desc': '快来和我贴贴qaq',
+        },
+        'mick0960': {
+            'name': 'mick0960',
+            'avatar': 'https://q1.qlogo.cn/g?b=qq&nk=321515148&s=640',
+            'link': 'https://www.mickide.cn/',
+            'desc': '少即是多，慢即是快',
+        },
+        'cheny': {
+            'name': 'Cheny',
+            'avatar': 'https://pic.cnblogs.com/avatar/3327164/20240124043000.png',
+            'link': 'https://www.cnblogs.com/viol1t-cheny',
+            'desc': '',
+        },
+        'cming': {
+            'name': 'cming',
+            'avatar': 'https://q1.qlogo.cn/g?b=qq&nk=483028659&s=640',
+            'link': '#',
+            'desc': '',
+        },
+        'liangmo': {
+            'name': 'liangmo',
+            'avatar': 'https://q1.qlogo.cn/g?b=qq&nk=65316749&s=640',
+            'link': '#',
+            'desc': '',
+        },
+        'P4tt0n': {
+            'name': 'P4tt0n',
+            'avatar': 'https://q1.qlogo.cn/g?b=qq&nk=3082953424&s=640',
+            'link': '#',
+            'desc': '',
+        },
+        'W3nL0u': {
+            'name': 'W3nL0u',
+            'avatar': 'https://xyy9233.oss-cn-beijing.aliyuncs.com/hexoblog/image-20241120201621033.png',
+            'link': 'https://xyy9233.github.io/',
+            'desc': '努力不够又谈何天赋不足？',
+        },
+        'Datch': {
+            'name': 'Datch',
+            'avatar': 'https://q1.qlogo.cn/g?b=qq&nk=3114259585&s=640',
+            'link': '#',
+            'desc': '',
+        },
+        '柿子': {
+            'name': '柿子',
+            'avatar': 'https://y7syeu.github.io/images/avatar.jpg',
+            'link': 'https://y7syeu.github.io/',
+            'desc': '',
+        },
+        'L1nkStar': {
+            'name': 'L1nkStar',
+            'avatar': 'https://q1.qlogo.cn/g?b=qq&nk=541167999&s=640',
+            'link': '#',
+            'desc': '',
+        }
+    };
+
     const data = [
         {
-            "category": "赞助商",
+            "category": "金牌赞助商",
             people: [
                 {
-                    name: 'DK 盾',
-                    avatar: 'https://s2.loli.net/2024/11/06/KFNJw6To7vmj3qf.png',
-                    link: 'https://www.dkdun.cn/',
-                    desc: '打造高性价比云服务器，让广大CTFer、学生群体早日上云',
+                    name: 'dk',
                     job: '服务器赞助'
                 }
             ]
@@ -19,17 +235,11 @@ export const Supporters = () => {
             category: "策划",
             people: [
                 {
-                    name: 'Kengwang',
-                    avatar: 'https://gcore.jsdelivr.net/gh/kengwang/CDN@main/avatar.png',
-                    link: 'https://blog.kengwang.com.cn/',
-                    desc: 'Stay Cool~',
+                    name: 'kengwang',
                     job: '策划/运维'
                 },
                 {
-                    name: 'LilRan',
-                    avatar: 'https://blog.xinshi.fun/assets/avatar.png',
-                    link: 'https://blog.xinshi.fun/',
-                    desc: '今日启程 无畏向前',
+                    name: 'lilran',
                     job: '策划/运维'
                 }
             ]
@@ -37,13 +247,42 @@ export const Supporters = () => {
         {
             category: "出题",
             people: [
-                {
-                    name: 'LilRan',
-                    avatar: 'https://blog.xinshi.fun/assets/avatar.png',
-                    link: 'https://blog.xinshi.fun/',
-                    desc: '今日启程 无畏向前',
-                    job: 'Misc 方向'
-                }
+                { name: 'lilran', job: 'Misc 方向出题/审题' },
+                { name: 'kengwang', job: 'Web 方向出题/审题' },
+                { name: '北极仙翁', job: 'Web 方向出题' },
+                { name: 'luoingly', job: '出题' },
+                { name: 'yuro', job: 'Reverse 方向出题' },
+                { name: 'delete', job: 'Web 方向出题' },
+                { name: 'sudopacman', job: 'Crypto 方向出题' },
+                { name: 'gets', job: 'Pwn 方向出题' },
+                { name: 'crazyman_army', job: 'Pyjail 方向出题' },
+                { name: 'n1ght', job: 'Web 方向出题' },
+                { name: 'chu0', job: 'Web/渗透 方向出题' },
+                { name: 'chenxi', job: 'Web 方向出题' },
+                { name: 'clearwine', job: 'Web/Misc 方向出题' },
+                { name: 'goku', job: 'Web 方向出题' },
+                { name: 'j1nghong', job: 'Web 方向出题' },
+                { name: 'lazy_forever', job: 'Web 方向出题' },
+                { name: 'konpure', job: 'Web 方向出题' },
+                { name: 'nshide', job: 'Reverse 方向出题' },
+                { name: 'a1gorithms', job: 'Reverse 方向出题' },
+                { name: 'linkhash', job: 'Reverse 方向出题' },
+                { name: 'chovy', job: 'Reverse 方向出题' },
+                { name: 'C2', job: 'Reverse 方向出题' },
+                { name: 'pr1s0n3r', job: '出题' },
+                { name: 'naby', job: 'Crypto 方向出题' },
+                { name: 'yunru', job: 'Crypto 方向出题' },
+                { name: 'nydn', job: 'Pwn 方向出题' },
+                { name: 'mick0960', job: 'Pwn 方向出题' },
+                { name: 'cheny', job: 'Pwn/Misc 方向出题' },
+                { name: 'cming', job: 'Misc 方向出题' },
+                { name: 'liangmo', job: 'Misc 方向出题' },
+                { name: 'P4tt0n', job: 'Misc 方向出题' },
+                { name: 'W3nL0u', job: 'Misc 方向出题' },
+                { name: 'Datch', job: 'Web 方向出题' },
+                { name: '柿子', job: 'Web 方向出题' },
+                { name: 'L1nkStar', job: '出题' },
+
             ]
         },
         {
@@ -51,16 +290,10 @@ export const Supporters = () => {
             people: [
                 {
                     name: '北极仙翁',
-                    avatar: 'https://q.qlogo.cn/headimg_dl?dst_uin=1973450284&spec=640&img_type=jpg',
-                    link: 'https://www.ehpolestar.com/',
-                    desc: '北极仙翁的夜间茶馆',
                     job: '宣传海报'
                 },
                 {
-                    name: 'LilRan',
-                    avatar: 'https://blog.xinshi.fun/assets/avatar.png',
-                    link: 'https://blog.xinshi.fun/',
-                    desc: '今日启程 无畏向前',
+                    name: 'lilran',
                     job: '宣传'
                 }
             ]
@@ -73,15 +306,16 @@ export const Supporters = () => {
                 <div key={index}>
                     <h2>{item.category}</h2>
                     <div>
-                        {item.people.map((person, index) => (
-                            <Person
-                                name={person.name}
-                                avatar={person.avatar}
-                                link={person.link}
-                                description={person.desc}
+                        {item.people.map((person, index) => {
+                            let personInfo = peoples[person.name];
+                            return (<Person
+                                name={personInfo.name}
+                                avatar={personInfo.avatar}
+                                link={personInfo.link}
+                                description={personInfo.desc}
                                 job={person.job}
-                            />
-                        ))}
+                            />)
+                        })}
                     </div>
                 </div>
             ))}
